@@ -1,6 +1,6 @@
 # Clean Emitter
 
-Listen and emit events without dirty your classes/objects.
+Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.
 
 ## Installation
 
