@@ -25,6 +25,7 @@ const createEmitter = (name: any): EventEmitter => ({
     emitters.set(name, listeners);
     return this;
   },
+
   once (event: string, handler: Handler) {
     const once = (payload) => {
       this.off(event, once);
@@ -33,6 +34,7 @@ const createEmitter = (name: any): EventEmitter => ({
     this.on(event, once);
     return this;
   },
+
   off (event?: string, handler?: Handler) {
     const listeners = getListeners(name);
 
@@ -48,6 +50,7 @@ const createEmitter = (name: any): EventEmitter => ({
 
     return this;
   },
+
   emit (event: string, payload: any) {
     const handlers = getHandlers(name, event);
     handlers.forEach((handler) => handler(payload))
