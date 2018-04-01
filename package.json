@@ -2,9 +2,18 @@
   "name": "clean-emitter",
   "version": "0.0.0",
   "description": "Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.",
-  "main": "index.js",
+  "cdn": "dist/clean-emitter.js",
+  "main": "dist/clean-emitter.cjs.js",
+  "unpkg": "dist/clean-emitter.js",
+  "types": "dist/clean-emitter.d.ts",
+  "module": "dist/clean-emitter.es.js",
+  "browser": "dist/clean-emitter.js",
+  "jsdelivr": "dist/clean-emitter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ts": "tsc src/clean-emitter -d --outDir dist --lib es2018 -t es2015",
+    "build:bili": "bili dist/clean-emitter.js --formats cjs,es,umd --js buble",
+    "build": "npm run build:ts && npm run build:bili"
   },
   "repository": {
     "type": "git",
@@ -24,5 +33,9 @@
   "bugs": {
     "url": "https://github.com/VitorLuizC/clean-emitter/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/clean-emitter#readme"
+  "homepage": "https://github.com/VitorLuizC/clean-emitter#readme",
+  "devDependencies": {
+    "bili": "^3.0.14",
+    "typescript": "^2.8.1"
+  }
 }
