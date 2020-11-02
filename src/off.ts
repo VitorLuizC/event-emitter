@@ -2,7 +2,7 @@ import type Handler from './types/Handler.js';
 import type KeyOf from './types/KeyOf.js';
 
 import emitters from './emitters.js';
-import not from './util/not.js';
+import not from './utils/not.js';
 
 /**
  * Detach event handler from event name.
