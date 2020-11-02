@@ -1,25 +1,25 @@
 {
-  "name": "clean-emitter",
+  "name": "@bitty/event-emitter",
   "version": "0.0.0",
   "description": "Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.",
-  "cdn": "dist/clean-emitter.js",
-  "main": "dist/clean-emitter.cjs.js",
-  "unpkg": "dist/clean-emitter.js",
-  "types": "dist/clean-emitter.d.ts",
-  "module": "dist/clean-emitter.es.js",
-  "browser": "dist/clean-emitter.js",
-  "jsdelivr": "dist/clean-emitter.js",
+  "cdn": "dist/event-emitter.js",
+  "main": "dist/event-emitter.cjs.js",
+  "unpkg": "dist/event-emitter.js",
+  "types": "dist/event-emitter.d.ts",
+  "module": "dist/event-emitter.es.js",
+  "browser": "dist/event-emitter.js",
+  "jsdelivr": "dist/event-emitter.js",
   "scripts": {
     "lint": "prettier --check \"./{src,examples}/**/*.ts\"",
     "lint:fix": "prettier --write \"./{src,examples}/**/*.ts\"",
     "test": "pnpm run lint && echo \"Error: no test specified\" && exit 1",
-    "build:typescript": "tsc src/clean-emitter -d --outDir dist --lib es2018 -t es2015",
-    "build:bili": "bili dist/clean-emitter --banner --formats cjs,es,umd --js buble",
+    "build:typescript": "tsc src/event-emitter -d --outDir dist --lib es2018 -t es2015",
+    "build:bili": "bili dist/event-emitter --banner --formats cjs,es,umd --js buble",
     "build": "pnpm run build:typescript && pnpm run build:bili"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VitorLuizC/clean-emitter.git"
+    "url": "git+https://github.com/VitorLuizC/event-emitter.git"
   },
   "keywords": [
     "event-emitter",
@@ -33,9 +33,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VitorLuizC/clean-emitter/issues"
+    "url": "https://github.com/VitorLuizC/event-emitter/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/clean-emitter#readme",
+  "homepage": "https://github.com/VitorLuizC/event-emitter#readme",
   "devDependencies": {
     "bili": "^3.0.14",
     "prettier": "^2.1.2",

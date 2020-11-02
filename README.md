@@ -1,4 +1,4 @@
-# Clean Emitter
+# `@bitty/event-emitter`
 
 Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.
 
@@ -7,10 +7,10 @@ Listen and emit events without dirty your classes, objects and functions with Ev
 Just install it using a your package manager.
 
 ```sh
-npm install clean-emitter
+npm install @bitty/event-emitter --save
 
-# If you're using Yarn install using the comand below.
-yarn add clean-emitter
+# If you're using Yarn install using the command below.
+yarn add @bitty/event-emitter
 ```
 
 ## How it works
@@ -37,7 +37,7 @@ interface.
 ## Usage
 
 ```js
-import createEmitter from 'clean-emitter';
+import createEmitter from '@bitty/event-emitter';
 
 const user = {
   name: 'Bruce Wayne'

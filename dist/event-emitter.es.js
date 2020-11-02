@@ -1,12 +1,8 @@
 /*!
- * clean-emitter v0.0.0
- * (c) 2018-present Vitor Luiz Cavalcanti <vitorluizc@outlook.com> (https://vitorluizc.github.io)
+ * @bitty/event-emitter v0.0.0
+ * (c) 2020-present Vitor Luiz Cavalcanti <vitorluizc@outlook.com> (https://vitorluizc.github.io)
  * Released under the MIT License.
  */
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var emitters = new WeakMap();
 
 var getListeners = function (name) { return emitters.get(name) || new Map(); };
@@ -60,5 +56,5 @@ var createEmitter = function (name) { return ({
 
 }); };
 
-exports.default = createEmitter;
-exports.createEmitter = createEmitter;
+export default createEmitter;
+export { createEmitter };
