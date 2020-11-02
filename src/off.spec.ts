@@ -1,8 +1,10 @@
 import test, { afterEach } from 'ava';
+
 import emit from './emit.js';
 import emitters from './emitters.js';
 import off from './off.js';
 import on from './on.js';
+import wait from './utils/wait.js';
 
 let target: object;
 
@@ -32,9 +34,7 @@ test('off: detach event handler from event name', async (context) => {
   emit(target, 'add-stuff', undefined);
   emit(target, 'add-stuff', undefined);
 
-  await new Promise((resolve) => {
-    setTimeout(resolve, 500);
-  });
+  await wait(500);
 
   context.is(onAddStuffCalledTimes, 1);
 });
@@ -79,9 +79,7 @@ test('off: detach all event handlers from event name', async (context) => {
   emit(target, 'add-stuff', undefined);
   emit(target, 'add-stuff', undefined);
 
-  await new Promise((resolve) => {
-    setTimeout(resolve, 500);
-  });
+  await wait(500);
 
   context.is(onAddStuffACalledTimes, 1);
   context.is(onAddStuffBCalledTimes, 1);
@@ -135,9 +133,7 @@ test('off: detach all event handlers from all event name', async (context) => {
   emit(target, 'add-stuff-d', undefined);
   emit(target, 'add-stuff-e', undefined);
 
-  await new Promise((resolve) => {
-    setTimeout(resolve, 500);
-  });
+  await wait(500);
 
   context.is(onAddStuffACalledTimes, 1);
   context.is(onAddStuffBCalledTimes, 1);

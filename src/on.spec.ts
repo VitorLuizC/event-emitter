@@ -1,7 +1,9 @@
 import test, { afterEach } from 'ava';
+
 import emit from './emit.js';
 import emitters from './emitters.js';
 import on from './on.js';
+import wait from './utils/wait.js';
 
 let target: object;
 
@@ -40,9 +42,7 @@ test('on: event handler can be called any time', async (context) => {
   emit(target, 'add-stuff', undefined);
   emit(target, 'add-stuff', undefined);
 
-  await new Promise((resolve) => {
-    setTimeout(resolve, 500);
-  });
+  await wait(500);
 
   context.is(onAddStuffCalledTimes, 5);
 });

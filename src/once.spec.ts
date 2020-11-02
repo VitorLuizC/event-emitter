@@ -1,7 +1,9 @@
 import test, { afterEach } from 'ava';
+
 import emit from './emit.js';
 import emitters from './emitters.js';
 import once from './once.js';
+import wait from './utils/wait.js';
 
 let target: object;
 
@@ -40,9 +42,7 @@ test('once: event handler can only be called once', async (context) => {
   emit(target, 'add-stuff', undefined);
   emit(target, 'add-stuff', undefined);
 
-  await new Promise((resolve) => {
-    setTimeout(resolve, 500);
-  });
+  await wait(500);
 
   context.is(onAddStuffCalledTimes, 1);
 });
