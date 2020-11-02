@@ -29,7 +29,7 @@ const createEmitter = (name: any): EventEmitter => ({
   },
 
   once(event: string, handler: Handler) {
-    const once = (payload) => {
+    const once = (payload: any) => {
       this.off(event, once);
       handler(payload);
     };
@@ -40,13 +40,13 @@ const createEmitter = (name: any): EventEmitter => ({
   off(event?: string, handler?: Handler) {
     const listeners = getListeners(name);
 
-    if (!event && !handler) {
+    if (!event) {
       listeners.clear();
-    } else if (event && !handler) {
+    } else if (!handler) {
       listeners.delete(event);
     } else {
       const handlers = getHandlers(name, event);
-      const isNotHandler = (value) => value !== handler;
+      const isNotHandler = (value: Handler) => value !== handler;
       listeners.set(name, handlers.filter(isNotHandler));
     }
 
