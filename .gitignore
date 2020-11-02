@@ -4,8 +4,14 @@
 # Node.js modules.
 node_modules/
 
-# NPM's lockfile.
+# NPM's lockfiles.
+# We're using PNPM and it provides its own lockfile.
 package-lock.json
+npm-shrinkwrap.json‎
+
+# Yarn's lockfile
+# We're using PNPM and it provides its own lockfile.
+yarn.lock
 
 # Log files.
 *.log

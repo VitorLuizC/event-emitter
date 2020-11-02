@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:typescript": "tsc src/clean-emitter -d --outDir dist --lib es2018 -t es2015",
     "build:bili": "bili dist/clean-emitter --banner --formats cjs,es,umd --js buble",
-    "build": "npm run build:typescript && npm run build:bili"
+    "build": "pnpm run build:typescript && pnpm run build:bili"
   },
   "repository": {
     "type": "git",
