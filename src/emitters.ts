@@ -1,4 +1,4 @@
-import type Listeners from './Listeners.js';
+import type Listeners from './types/Listeners.js';
 
 /**
  * A `WeakMap` of event emitters. It uses object references as keys and `Map`s
