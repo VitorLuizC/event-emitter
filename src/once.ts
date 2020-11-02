@@ -1,5 +1,5 @@
-import type Handler from './Handler.js';
-import type KeyOf from './util/KeyOf.js';
+import type Handler from './types/Handler.js';
+import type KeyOf from './types/KeyOf.js';
 
 import off from './off.js';
 import on from './on.js';

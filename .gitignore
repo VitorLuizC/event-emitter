@@ -2,7 +2,7 @@
 .DS_Store
 
 # Node.js modules.
-node_modules/
+/node_modules
 
 # NPM's lockfiles.
 # We're using PNPM and it provides its own lockfile.
@@ -23,11 +23,11 @@ yarn.lock
 !.env.default
 
 # Generated distribution bundles and their source-maps.
-dist/
+/dist
 
 # Generated type declarations.
-types/
+/types
 
 # Transpiled modules and their source-maps.
-src/**/*.js
-src/**/*.js.map
+/src/**/*.js
+/src/**/*.js.map

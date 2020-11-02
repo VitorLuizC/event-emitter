@@ -1,6 +1,6 @@
-import type EventEmitter from './EventEmitter.js';
-import type Handler from './Handler.js';
-import type KeyOf from './util/KeyOf.js';
+import type EventEmitter from './types/EventEmitter.js';
+import type Handler from './types/Handler.js';
+import type KeyOf from './types/KeyOf.js';
 
 import emit from './emit.js';
 import off from './off.js';

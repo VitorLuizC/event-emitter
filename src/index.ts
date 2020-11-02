@@ -1,5 +1,5 @@
-export type { default as EventEmitter } from './EventEmitter.js';
-export type { default as Handler } from './Handler.js';
+export type { default as EventEmitter } from './types/EventEmitter.js';
+export type { default as Handler } from './types/Handler.js';
 
 export { default as createEventEmitter } from './createEventEmitter.js';
 export {

@@ -1,5 +1,5 @@
 import type Handler from './Handler.js';
-import type KeyOf from './util/KeyOf.js';
+import type KeyOf from './KeyOf.js';
 
 interface EventEmitter<Events extends Record<string, unknown>> {
   /**
