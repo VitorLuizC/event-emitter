@@ -1,9 +1,5 @@
-# Treat as text when is possible.
-* text=auto
+# File attributes for Git repository.
+# References at https://git-scm.com/docs/gitattributes.
 
-# Ensure Unix line-endings.
-* eol=lf
-
-# Don't handle Yarn lockfile's diffs.
-# Since version 1.0 Yarn automatically handle it.
-yarn.lock -diff
+# Handle files as text and ensure Unix line endings.
+* text=auto eol=lf
