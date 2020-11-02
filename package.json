@@ -10,7 +10,9 @@
   "browser": "dist/clean-emitter.js",
   "jsdelivr": "dist/clean-emitter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check \"./{src,examples}/**/*.ts\"",
+    "lint:fix": "prettier --write \"./{src,examples}/**/*.ts\"",
+    "test": "pnpm run lint && echo \"Error: no test specified\" && exit 1",
     "build:typescript": "tsc src/clean-emitter -d --outDir dist --lib es2018 -t es2015",
     "build:bili": "bili dist/clean-emitter --banner --formats cjs,es,umd --js buble",
     "build": "pnpm run build:typescript && pnpm run build:bili"
@@ -36,6 +38,7 @@
   "homepage": "https://github.com/VitorLuizC/clean-emitter#readme",
   "devDependencies": {
     "bili": "^3.0.14",
+    "prettier": "^2.1.2",
     "typescript": "^2.8.1"
   }
 }
