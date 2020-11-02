@@ -4,4 +4,3 @@
 type KeyOf<T> = keyof T & string;
 
 export default KeyOf;
-

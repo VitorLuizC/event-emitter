@@ -8,5 +8,4 @@ function not<T>(valueA: T) {
   return (valueB: T) => valueA !== valueB;
 }
 
-
 export default not;

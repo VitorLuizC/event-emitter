@@ -7,10 +7,7 @@ interface EventEmitter<Events extends Record<string, unknown>> {
    * @param name - An event name.
    * @param payload - Any value used as argument for event handlers.
    */
-  emit<Name extends KeyOf<Events>>(
-    name: Name,
-    payload: Events[Name]
-  ): this;
+  emit<Name extends KeyOf<Events>>(name: Name, payload: Events[Name]): this;
 
   /**
    * Detach event handler from event name.
@@ -19,7 +16,7 @@ interface EventEmitter<Events extends Record<string, unknown>> {
    */
   off<Name extends KeyOf<Events>>(
     name: Name,
-    handler: Handler<Events[Name]>
+    handler: Handler<Events[Name]>,
   ): this;
 
   /**
@@ -40,7 +37,7 @@ interface EventEmitter<Events extends Record<string, unknown>> {
    */
   on<Name extends KeyOf<Events>>(
     name: Name,
-    handler: Handler<Events[Name]>
+    handler: Handler<Events[Name]>,
   ): this;
 
   /**
@@ -50,7 +47,7 @@ interface EventEmitter<Events extends Record<string, unknown>> {
    */
   once<Name extends KeyOf<Events>>(
     name: Name,
-    handler: Handler<Events[Name]>
+    handler: Handler<Events[Name]>,
   ): this;
 }
 

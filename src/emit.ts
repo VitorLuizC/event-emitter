@@ -1,5 +1,5 @@
-import emitters from "./emitters.js";
-import type KeyOf from "./util/KeyOf.js";
+import emitters from './emitters.js';
+import type KeyOf from './util/KeyOf.js';
 
 /**
  * Execute handlers attached to the event name with payload.
