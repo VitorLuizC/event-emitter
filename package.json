@@ -1,6 +1,6 @@
 {
   "name": "@bitty/event-emitter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.",
   "cdn": "./dist/event-emitter.umd.min.js",
   "main": "./dist/event-emitter.js",
