@@ -1,5 +1,5 @@
-import type Handler from './Handler';
-import type KeyOf from './util/KeyOf';
+import type Handler from './Handler.js';
+import type KeyOf from './util/KeyOf.js';
 
 /**
  * A `Map` of event names and event handlers attached to them.
