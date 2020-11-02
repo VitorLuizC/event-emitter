@@ -25,9 +25,10 @@
     "lint:fix": "prettier --write \"./{src,examples}/**/*.ts\"",
     "test:transpile": "tsc -P ./tsconfig.test.json",
     "test": "pnpm run lint && pnpm run test:transpile && ava",
-    "build:typescript": "tsc -P ./tsconfig.build.json",
+    "build:transpile": "tsc -P ./tsconfig.build.json",
     "build:bundle": "rollup --config ./rollup.config.js",
-    "build": "pnpm run build:typescript && pnpm run build:bundle"
+    "build": "pnpm run build:transpile && pnpm run build:bundle",
+    "prepublishOnly": "pnpm run build && pnpm run test"
   },
   "repository": {
     "type": "git",
