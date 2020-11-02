@@ -23,7 +23,8 @@
   "scripts": {
     "lint": "prettier --check \"./{src,examples}/**/*.ts\"",
     "lint:fix": "prettier --write \"./{src,examples}/**/*.ts\"",
-    "test": "pnpm run lint && echo \"Error: no test specified\" && exit 1",
+    "test:transpile": "tsc -P ./tsconfig.test.json",
+    "test": "pnpm run lint && pnpm run test:transpile && ava",
     "build:typescript": "tsc -P ./tsconfig.build.json",
     "build:bundle": "rollup --config ./rollup.config.js",
     "build": "pnpm run build:typescript && pnpm run build:bundle"
@@ -52,5 +53,8 @@
     "rollup": "^2.33.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "ava": "^3.13.0"
   }
 }
