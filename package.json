@@ -2,20 +2,31 @@
   "name": "@bitty/event-emitter",
   "version": "0.0.0",
   "description": "Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.",
-  "cdn": "dist/event-emitter.js",
-  "main": "dist/event-emitter.cjs.js",
-  "unpkg": "dist/event-emitter.js",
-  "types": "dist/event-emitter.d.ts",
-  "module": "dist/event-emitter.es.js",
-  "browser": "dist/event-emitter.js",
-  "jsdelivr": "dist/event-emitter.js",
+  "cdn": "./dist/event-emitter.umd.min.js",
+  "main": "./dist/event-emitter.js",
+  "unpkg": "./dist/event-emitter.umd.min.js",
+  "types": "./types/event-emitter.d.ts",
+  "module": "./dist/event-emitter.esm.js",
+  "browser": "./dist/event-emitter.umd.min.js",
+  "jsdelivr": "./dist/event-emitter.umd.min.js",
+  "umd:main": "./dist/event-emitter.umd.js",
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/event-emitter.mjs",
+        "require": "./dist/event-emitter.js",
+        "default": "./dist/event-emitter.js"
+      },
+      "./dist/event-emitter.js"
+    ]
+  },
   "scripts": {
     "lint": "prettier --check \"./{src,examples}/**/*.ts\"",
     "lint:fix": "prettier --write \"./{src,examples}/**/*.ts\"",
     "test": "pnpm run lint && echo \"Error: no test specified\" && exit 1",
-    "build:typescript": "tsc src/event-emitter -d --outDir dist --lib es2018 -t es2015",
-    "build:bili": "bili dist/event-emitter --banner --formats cjs,es,umd --js buble",
-    "build": "pnpm run build:typescript && pnpm run build:bili"
+    "build:typescript": "tsc -P ./tsconfig.build.json",
+    "build:bundle": "rollup --config ./rollup.config.js",
+    "build": "pnpm run build:typescript && pnpm run build:bundle"
   },
   "repository": {
     "type": "git",
@@ -37,8 +48,9 @@
   },
   "homepage": "https://github.com/VitorLuizC/event-emitter#readme",
   "devDependencies": {
-    "bili": "^3.0.14",
     "prettier": "^2.1.2",
-    "typescript": "^2.8.1"
+    "rollup": "^2.33.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.0.5"
   }
 }
