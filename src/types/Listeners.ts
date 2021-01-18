@@ -5,8 +5,8 @@ import type KeyOf from './KeyOf.js';
  * A `Map` of event names and event handlers attached to them.
  */
 type Listeners<
-  EventDictionary extends Record<string, unknown>,
-  EventName extends KeyOf<EventDictionary> = KeyOf<EventDictionary>
-> = Map<EventName, Handler<EventDictionary[EventName]>[]>;
+  Events extends Record<string, unknown>,
+  Name extends KeyOf<Events> = KeyOf<Events>
+> = Map<Name, Handler<Events[Name]>[]>;
 
 export default Listeners;
