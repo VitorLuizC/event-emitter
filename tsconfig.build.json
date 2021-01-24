@@ -2,7 +2,6 @@
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "lib": ["ES2015"],
-    "target": "ES5",
     "declarationDir": "./types"
   },
   "include": ["./src/**/*.ts"],
