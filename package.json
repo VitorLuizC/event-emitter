@@ -1,6 +1,6 @@
 {
   "name": "@bitty/event-emitter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Listen and emit events without dirty your classes, objects and functions with EventEmitter interface.",
   "sideEffects": false,
   "files": [
