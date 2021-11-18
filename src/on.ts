@@ -10,7 +10,7 @@ import emitters from './emitters.js';
  */
 function on<
   Events extends Record<string, unknown> = any,
-  Name extends KeyOf<Events> = KeyOf<Events>
+  Name extends KeyOf<Events> = KeyOf<Events>,
 >(target: object, name: Name, handler: Handler<Events[Name]>): void {
   const listeners = emitters.get(target) ?? new Map();
 

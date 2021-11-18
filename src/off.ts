@@ -11,7 +11,7 @@ import not from './utils/not.js';
  */
 function off<
   Events extends Record<string, unknown> = any,
-  Name extends KeyOf<Events> = KeyOf<Events>
+  Name extends KeyOf<Events> = KeyOf<Events>,
 >(target: object, name: Name, handler: Handler<Events[Name]>): void;
 
 /**
@@ -20,7 +20,7 @@ function off<
  */
 function off<
   Events extends Record<string, unknown> = any,
-  Name extends KeyOf<Events> = KeyOf<Events>
+  Name extends KeyOf<Events> = KeyOf<Events>,
 >(target: object, name: Name): void;
 
 /**
@@ -40,7 +40,7 @@ function off(target: object): void;
  */
 function off<
   Events extends Record<string, unknown> = any,
-  Name extends KeyOf<Events> = KeyOf<Events>
+  Name extends KeyOf<Events> = KeyOf<Events>,
 >(target: object, name?: Name, handler?: Handler<Events[Name]>): void {
   const listeners = emitters.get(target);
 

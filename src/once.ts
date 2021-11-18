@@ -12,7 +12,7 @@ import on from './on.js';
  */
 function once<
   Events extends Record<string, unknown> = any,
-  Name extends KeyOf<Events> = KeyOf<Events>
+  Name extends KeyOf<Events> = KeyOf<Events>,
 >(target: object, name: Name, handler: Handler<Events[Name]>): void {
   const once = (payload: Events[Name]) => {
     off(target, name, once);

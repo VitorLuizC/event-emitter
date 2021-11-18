@@ -9,7 +9,7 @@ import type KeyOf from './types/KeyOf.js';
  */
 function emit<
   Events extends Record<string, unknown> = any,
-  Name extends KeyOf<Events> = KeyOf<Events>
+  Name extends KeyOf<Events> = KeyOf<Events>,
 >(target: object, name: Name, payload: Events[Name]) {
   const listeners = emitters.get(target);
 
