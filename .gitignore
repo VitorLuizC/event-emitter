@@ -4,23 +4,21 @@
 # Node.js modules.
 /node_modules
 
-# NPM's lockfiles.
-# We're using PNPM and it provides its own lockfile.
-package-lock.json
-npm-shrinkwrap.json‎
+# NPM's shrinkwrap.
+# We're using `package-lock.json` instead.
+npm-shrinkwrap.json
 
-# Yarn's lockfile
-# We're using PNPM and it provides its own lockfile.
+# Yarn's lockfile, Plug'n'Play, folder and settings.
+# We're using NPM and it provide its own lockfile and settings.
 yarn.lock
+.pnp.*
+.yarn/
+.yarnrc
+.yarnrc.yaml
 
 # Log files.
 *.log
 *.log.*
-
-# Environment variables.
-.env
-.env.*
-!.env.default
 
 # Generated distribution bundles and their source-maps.
 /dist
