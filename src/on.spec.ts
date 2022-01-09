@@ -1,4 +1,4 @@
-import test, { afterEach } from 'ava';
+import test from 'ava';
 
 import emit from './emit.js';
 import emitters from './emitters.js';
@@ -7,7 +7,7 @@ import wait from './utils/wait.js';
 
 let target: object;
 
-afterEach(() => {
+test.afterEach(() => {
   if (target) {
     emitters.delete(target);
   }
